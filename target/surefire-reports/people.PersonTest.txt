@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+Test set: people.PersonTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.047 s <<< FAILURE! - in people.PersonTest
+testDemo1(people.PersonTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: (a string containing "bu" and a string containing "ga")
+     but: a string containing "ga" was "buha"
+	at people.PersonTest.testDemo1(PersonTest.java:53)
+
+testDemo(people.PersonTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: The age is not correct! expected:<true> but was:<false>
+	at people.PersonTest.testDemo(PersonTest.java:47)
+
+testPersonAge(people.PersonTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: The age is not correct expected:<24> but was:<25>
+	at people.PersonTest.testPersonAge(PersonTest.java:15)
+
