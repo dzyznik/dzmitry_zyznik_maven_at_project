@@ -30,7 +30,7 @@ public class BookingDemo {
     public void testHover() {
         WebElement firstResult = new WebDriverWait(ThreadLocalDriver.getWebDriver(), 3000)
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@*[contains(., 'Choose your currency')]]/..")));
-        WebElement element = ThreadLocalDriver.getWebDriver().findElement(By.xpath("//*[@*[contains(., 'Choose your currency')]]/.."));
+//        WebElement element = ThreadLocalDriver.getWebDriver().findElement(By.xpath("//*[@*[contains(., 'Choose your currency')]]/.."));
         Actions actions = new Actions(ThreadLocalDriver.getWebDriver());
         actions.moveToElement(element);
         actions.perform();
