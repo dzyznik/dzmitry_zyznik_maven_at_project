@@ -1,7 +1,7 @@
 package tests;
 
 import objects.booking.Booking;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 
 public class BookingMadrid {

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,8 +37,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-XML_Test_suite">
-              <span class="suite-name border-passed">XML Test suite</span>
+            <a href="#" class="navigator-link" panel-name="suite-YAML_Test_suite">
+              <span class="suite-name border-failed">YAML Test suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,37 +48,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-XML_Test_suite">
-                    <span>testng.xml</span>
+                  <a href="#" class="navigator-link " panel-name="test-xml-YAML_Test_suite">
+                    <span>testng.yaml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-XML_Test_suite">
+                  <a href="#" class="navigator-link " panel-name="testlist-YAML_Test_suite">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-XML_Test_suite">
+                  <a href="#" class="navigator-link " panel-name="group-YAML_Test_suite">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-XML_Test_suite">
+                  <a href="#" class="navigator-link " panel-name="times-YAML_Test_suite">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-XML_Test_suite">
+                  <a href="#" class="navigator-link " panel-name="reporter-YAML_Test_suite">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-XML_Test_suite">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-YAML_Test_suite">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-XML_Test_suite">
+                  <a href="#" class="navigator-link " panel-name="chronological-YAML_Test_suite">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -91,7 +91,35 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">0 methods,   </span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-YAML_Test_suite" class="hide-methods failed suite-YAML_Test_suite"> (hide)</a> <!-- hide-methods failed suite-YAML_Test_suite -->
+                      <a href="#" panel-name="suite-YAML_Test_suite" class="show-methods failed suite-YAML_Test_suite"> (show)</a> <!-- show-methods failed suite-YAML_Test_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-YAML_Test_suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-YAML_Test_suite" title="tests.BookingRegister" hash-for-method="registrationTest">registrationTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-YAML_Test_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-YAML_Test_suite" class="hide-methods passed suite-YAML_Test_suite"> (hide)</a> <!-- hide-methods passed suite-YAML_Test_suite -->
+                      <a href="#" panel-name="suite-YAML_Test_suite" class="show-methods passed suite-YAML_Test_suite"> (show)</a> <!-- show-methods passed suite-YAML_Test_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-YAML_Test_suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-YAML_Test_suite" title="tests.BookingMadrid" hash-for-method="bookMadridTest">bookMadridTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-YAML_Test_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -102,89 +130,160 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-XML_Test_suite" class="panel XML_Test_suite">
-        </div> <!-- panel XML_Test_suite -->
-        <div panel-name="test-xml-XML_Test_suite" class="panel">
+        <div panel-name="suite-YAML_Test_suite" class="panel YAML_Test_suite">
+          <div class="suite-YAML_Test_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tests.BookingRegister</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="registrationTest">
+                  </a> <!-- registrationTest -->
+                  <span class="method-name">registrationTest</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //img[@data-qtip=&apos;Logging&apos;] (tried for 3 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;EPBYMINW0C61&apos;, ip: &apos;2a00:1760:8111:7:21bc:a0b9:b4a1:466c%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.6&apos;, java.version: &apos;1.8.0_261&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.183, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: /var/folders/q0/ml61k5tx60x...}, goog:chromeOptions: {debuggerAddress: localhost:63956}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: d0824e0abee0134efe92c7963b8f85a9
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at objects.trashmail.OpenMail.openTrashMail(OpenMail.java:19)
+	at tests.BookingRegister.registrationTest(BookingRegister.java:40)
+	at runners.BookingTestNgYamlSuite.main(BookingTestNgYamlSuite.java:16)
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-YAML_Test_suite-class-failed -->
+          <div class="suite-YAML_Test_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.BookingMadrid</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="bookMadridTest">
+                  </a> <!-- bookMadridTest -->
+                  <span class="method-name">bookMadridTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-YAML_Test_suite-class-passed -->
+        </div> <!-- panel YAML_Test_suite -->
+        <div panel-name="test-xml-YAML_Test_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/Dzmitry_Zyznik/Desktop/Maven/src/test/resources/testng.xml</span>
+            <span class="header-content">/Users/Dzmitry_Zyznik/Desktop/Maven/src/test/resources/testng.yaml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;XML Test suite&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Booking tests&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; name=&quot;YAML Test suite&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; name=&quot;Booking test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.BookingRegister&quot;/&gt;
       &lt;class name=&quot;tests.BookingMadrid&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Booking tests --&gt;
-&lt;/suite&gt; &lt;!-- XML Test suite --&gt;
+  &lt;/test&gt; &lt;!-- Booking test --&gt;
+&lt;/suite&gt; &lt;!-- YAML Test suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-XML_Test_suite" class="panel">
+        <div panel-name="testlist-YAML_Test_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for XML Test suite</span>
+            <span class="header-content">Tests for YAML Test suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Booking tests (2 classes)</span>
+                <span class="test-name">Booking test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-XML_Test_suite" class="panel">
+        <div panel-name="group-YAML_Test_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for XML Test suite</span>
+            <span class="header-content">Groups for YAML Test suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-XML_Test_suite" class="panel">
+        <div panel-name="times-YAML_Test_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for XML Test suite</span>
+            <span class="header-content">Times for YAML Test suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_XML_Test_suite');
-function tableData_XML_Test_suite() {
+suiteTableInitFunctions.push('tableData_YAML_Test_suite');
+function tableData_YAML_Test_suite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(0);
-window.suiteTableData['XML_Test_suite']= { tableData: data, tableDiv: 'times-div-XML_Test_suite'}
+data.addRows(2);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'registrationTest')
+data.setCell(0, 2, 'tests.BookingRegister')
+data.setCell(0, 3, 20891);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'bookMadridTest')
+data.setCell(1, 2, 'tests.BookingMadrid')
+data.setCell(1, 3, 16209);
+window.suiteTableData['YAML_Test_suite']= { tableData: data, tableDiv: 'times-div-YAML_Test_suite'}
 return data;
 }
               </script>
-              <div id="times-div-XML_Test_suite">
-              </div> <!-- times-div-XML_Test_suite -->
+              <span class="suite-total-time">Total running time: 37 seconds</span>
+              <div id="times-div-YAML_Test_suite">
+              </div> <!-- times-div-YAML_Test_suite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-XML_Test_suite" class="panel">
+        <div panel-name="reporter-YAML_Test_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for XML Test suite</span>
+            <span class="header-content">Reporter output for YAML Test suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-XML_Test_suite" class="panel">
+        <div panel-name="ignored-methods-YAML_Test_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-XML_Test_suite" class="panel">
+        <div panel-name="chronological-YAML_Test_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.BookingRegister</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">mailCheck</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">registrationTest</span>
+                <span class="method-start">17836 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.BookingMadrid</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">bookMadridTest</span>
+                <span class="method-start">38729 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

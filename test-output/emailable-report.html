@@ -8,10 +8,23 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">XML Test suite</th></tr>
-<tr><td><a href="#t0">Booking tests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">7</td><td></td><td></td></tr>
+<tr><th colspan="7">YAML Test suite</th></tr>
+<tr><td><a href="#t0">Booking test</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">54,944</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">XML Test suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4" class="invisible"/></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">YAML Test suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Booking test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.BookingRegister</td><td><a href="#m0">registrationTest</a></td><td rowspan="1">1604747814823</td><td rowspan="1">20891</td></tr><tr><th colspan="4">Booking test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.BookingMadrid</td><td><a href="#m1">bookMadridTest</a></td><td rowspan="1">1604747835716</td><td rowspan="1">16209</td></tr></tbody>
 </table>
-<h2>Booking tests</h2></body>
+<h2>Booking test</h2><h3 id="m0">tests.BookingRegister#registrationTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //img[@data-qtip=&apos;Logging&apos;] (tried for 3 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;EPBYMINW0C61&apos;, ip: &apos;2a00:1760:8111:7:21bc:a0b9:b4a1:466c%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.6&apos;, java.version: &apos;1.8.0_261&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.183, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: /var/folders/q0/ml61k5tx60x...}, goog:chromeOptions: {debuggerAddress: localhost:63956}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: d0824e0abee0134efe92c7963b8f85a9
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at objects.trashmail.OpenMail.openTrashMail(OpenMail.java:19)
+	at tests.BookingRegister.registrationTest(BookingRegister.java:40)
+	at runners.BookingTestNgYamlSuite.main(BookingTestNgYamlSuite.java:16)
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.BookingMadrid#bookMadridTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
 </html>

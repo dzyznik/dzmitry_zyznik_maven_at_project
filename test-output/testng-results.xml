@@ -1,11 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="XML Test suite" duration-ms="7" started-at="2020-11-07T09:41:02Z" finished-at="2020-11-07T09:41:02Z">
+  <suite name="YAML Test suite" duration-ms="54944" started-at="2020-11-07T11:16:36Z" finished-at="2020-11-07T11:17:31Z">
     <groups>
     </groups>
-    <test name="Booking tests" duration-ms="7" started-at="2020-11-07T09:41:02Z" finished-at="2020-11-07T09:41:02Z">
-    </test> <!-- Booking tests -->
-  </suite> <!-- XML Test suite -->
+    <test name="Booking test" duration-ms="54944" started-at="2020-11-07T11:16:36Z" finished-at="2020-11-07T11:17:31Z">
+      <class name="tests.BookingRegister">
+        <test-method status="PASS" signature="mailCheck()[pri:0, instance:tests.BookingRegister@51565ec2]" name="mailCheck" is-config="true" duration-ms="17824" started-at="2020-11-07T11:16:36Z" finished-at="2020-11-07T11:16:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mailCheck -->
+        <test-method status="FAIL" signature="registrationTest()[pri:0, instance:tests.BookingRegister@51565ec2]" name="registrationTest" duration-ms="20891" started-at="2020-11-07T11:16:54Z" finished-at="2020-11-07T11:17:15Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //img[@data-qtip='Logging'] (tried for 3 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'EPBYMINW0C61', ip: '2a00:1760:8111:7:21bc:a0b9:b4a1:466c%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.183, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: /var/folders/q0/ml61k5tx60x...}, goog:chromeOptions: {debuggerAddress: localhost:63956}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: d0824e0abee0134efe92c7963b8f85a9]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //img[@data-qtip='Logging'] (tried for 3 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'EPBYMINW0C61', ip: '2a00:1760:8111:7:21bc:a0b9:b4a1:466c%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.183, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: /var/folders/q0/ml61k5tx60x...}, goog:chromeOptions: {debuggerAddress: localhost:63956}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: d0824e0abee0134efe92c7963b8f85a9
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at objects.trashmail.OpenMail.openTrashMail(OpenMail.java:19)
+at tests.BookingRegister.registrationTest(BookingRegister.java:40)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at runners.BookingTestNgYamlSuite.main(BookingTestNgYamlSuite.java:16)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registrationTest -->
+      </class> <!-- tests.BookingRegister -->
+      <class name="tests.BookingMadrid">
+        <test-method status="PASS" signature="bookMadridTest()[pri:0, instance:tests.BookingMadrid@482f8f11]" name="bookMadridTest" duration-ms="16209" started-at="2020-11-07T11:17:15Z" finished-at="2020-11-07T11:17:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bookMadridTest -->
+      </class> <!-- tests.BookingMadrid -->
+    </test> <!-- Booking test -->
+  </suite> <!-- YAML Test suite -->
 </testng-results>

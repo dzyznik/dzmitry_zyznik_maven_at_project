@@ -9,13 +9,14 @@ import objects.trashmail.LoginTrash;
 import objects.trashmail.OpenMail;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import java.awt.*;
 
 
 public class BookingRegister {
-    @Before
+    @BeforeClass
     public void mailCheck() throws AWTException {
         PreconditionMail preconditionMail = new PreconditionMail();
         preconditionMail.newMail();

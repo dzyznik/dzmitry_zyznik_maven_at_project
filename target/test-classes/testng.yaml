@@ -1,5 +1,4 @@
 name: YAML Test suite
-parallel: classes
 threadCount: 2
 tests:
   - name: Booking test
