@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="XML Test suite" duration-ms="7" started-at="2020-11-07T09:41:02Z" finished-at="2020-11-07T09:41:02Z">
+    <groups>
+    </groups>
+    <test name="Booking tests" duration-ms="7" started-at="2020-11-07T09:41:02Z" finished-at="2020-11-07T09:41:02Z">
+    </test> <!-- Booking tests -->
+  </suite> <!-- XML Test suite -->
+</testng-results>

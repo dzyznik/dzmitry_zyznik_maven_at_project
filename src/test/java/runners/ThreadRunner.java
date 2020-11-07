@@ -1,12 +1,4 @@
-package runner;
-
-import day15.DemoRunner;
-import day16.Booking;
-import day16.BookingMoscow;
-import day16.Screenshot;
-import day16.W3Schools;
-import day17.BookingHover;
-import day17.SelectDemo;
+package runners;
 
 public class ThreadRunner {
     public static void main(String[] args) {
