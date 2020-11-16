@@ -1,26 +1,29 @@
 package objects.booking;
 
 import driver.ThreadLocalDriver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebElement;
+import io.cucumber.java.en.Given;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Booking {
 
     Actions actions = new Actions(ThreadLocalDriver.getWebDriver());
-    public void bookingSite(){
+
+    @Given("I go to Booking")
+    public void bookingSite() {
         ThreadLocalDriver.getWebDriver().get("https://www.booking.com");
     }
 
-    public void registerButton(){
+    public void registerButton() {
         ThreadLocalDriver.getWebDriver().findElement(By.xpath("//div[@class = 'sign_in_wrapper']/span[contains(.,'Register')]")).click();
     }
 
-    public void emailInput(){
+    public void emailInput() {
         WebElement inputEmail = new WebDriverWait(ThreadLocalDriver.getWebDriver(), 3)
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@type='email']")));
         actions.click(inputEmail)
@@ -30,7 +33,7 @@ public class Booking {
                 .perform();
     }
 
-    public void passwordInput(){
+    public void passwordInput() {
         WebElement inputPass = new WebDriverWait(ThreadLocalDriver.getWebDriver(), 3)
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='password']")));
         actions.click(inputPass)
@@ -39,7 +42,7 @@ public class Booking {
                 .perform();
     }
 
-    public void passwordConfirm(){
+    public void passwordConfirm() {
         WebElement inputConfPass = new WebDriverWait(ThreadLocalDriver.getWebDriver(), 3)
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='confirmed_password']")));
         actions.click(inputConfPass)
@@ -49,7 +52,7 @@ public class Booking {
                 .perform();
     }
 
-    public void personalization(){
+    public void personalization() {
         WebElement inputFirstName = new WebDriverWait(ThreadLocalDriver.getWebDriver(), 3)
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@title='First name']")));
         actions.click(inputFirstName)
@@ -77,7 +80,12 @@ public class Booking {
                 .perform();
     }
 
-    public void checkAcc(){
+    public void checkAcc() {
+//        Thread.sleep(5000);
+//        WebElement signIn = ThreadLocalDriver.getWebDriver().findElement(By.xpath("//span[contains(.,'Sign in')]"));
+//        signIn.click();
+//        emailInput();
+//        passwordInput();
         WebElement notification = new WebDriverWait(ThreadLocalDriver.getWebDriver(), 3)
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@data-id='notifications']")));
         actions.click(notification)
@@ -89,9 +97,7 @@ public class Booking {
             System.out.println("Account wasn't confirmed");
             ThreadLocalDriver.getWebDriver().close();
             ThreadLocalDriver.setDriverNull();
-        }
-
-        catch (TimeoutException timeoutException){
+        } catch (TimeoutException timeoutException) {
             System.out.println("Account was confirmed");
             ThreadLocalDriver.getWebDriver().close();
             ThreadLocalDriver.setDriverNull();
@@ -100,7 +106,7 @@ public class Booking {
 
     }
 
-    public void login(){
+    public void login() {
         ThreadLocalDriver.getWebDriver().findElement(By.xpath("//div[@class = 'sign_in_wrapper']/span[contains(.,'Sign in')]")).click();
         WebElement username = new WebDriverWait(ThreadLocalDriver.getWebDriver(), 3)
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='username']")));
@@ -110,9 +116,12 @@ public class Booking {
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='password']")));
         actions.click(password).sendKeys("Qq12345678").build().perform();
         ThreadLocalDriver.getWebDriver().findElement(By.xpath("//button[@type='submit']")).click();
+        WebElement userName = new WebDriverWait(ThreadLocalDriver.getWebDriver(), 3)
+                .until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='user_name_block']")));
+
     }
 
-    public void searchMadrid(){
+    public void searchMadrid() {
         WebElement checkField = new WebDriverWait(ThreadLocalDriver.getWebDriver(), 3)
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@data-mode='checkin']")));
 
@@ -139,7 +148,7 @@ public class Booking {
         ThreadLocalDriver.getWebDriver().findElement(By.xpath("//button[@class='sb-searchbox__button ']")).click();
     }
 
-    public void likeHotels(){
+    public void likeHotels() {
         WebElement heartFirst = new WebDriverWait(ThreadLocalDriver.getWebDriver(), 3)
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='hotellist_inner']/div[contains(., data-et-view)][1]/div/div[1]/button")));
         actions.click(heartFirst).build().perform();
@@ -150,7 +159,7 @@ public class Booking {
     }
 
 
-    public void checkWishList(){
+    public void checkWishList() {
         WebElement profilePic = new WebDriverWait(ThreadLocalDriver.getWebDriver(), 3)
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='Profile Picture']")));
         actions.moveToElement(profilePic).click(profilePic).build().perform();
@@ -168,11 +177,44 @@ public class Booking {
         boolean displayedSecond = secondItem.isDisplayed();
 
 
-        if (displayedFirst && displayedSecond){
+        if (displayedFirst && displayedSecond) {
             System.out.println("Test passed");
-        }
-        else System.out.println("Test failed");
+        } else System.out.println("Test failed");
     }
 
 
+    public void findH1() {
+        try {
+            WebElement h1 = ThreadLocalDriver.getWebDriver().findElement(By.xpath("//h1"));
+            System.out.println("h1 element is present:" + h1.getText());
+        } catch (NoSuchElementException noSuchElementException) {
+            System.out.println("No h1 elements");
+        }
+    }
+
+//
+//    public void findH2() {
+//        WebElement h2 = ThreadLocalDriver.getWebDriver().findElement(By.xpath("//h2"));
+//        h2.
+//        String oneClass = "Recent searches";
+//        String twoClass = "Recommended destinations";
+//        String threeClass = "Browse by property type";
+//        String fourClass = "Get inspiration for your next trip";
+//        String fiveClass = "Homes guests love";
+//        String sixClass = "Destinations we loves";
+//        String sevenClass = "Discover";
+//        String eightClass = "Save time, save money!";
+//        String nineClass = "Verified reviews from real guests.";
+//        String tenClass = "Verified  How does it work?";
+//
+//       String gg = String.format("//h2[@class='%s'", oneClass);
+//        System.out.println(gg);
+//
+//        WebElement h1 = ThreadLocalDriver.getWebDriver().findElement(By.xpath("//h2[@class='|%s|'", oneClass));
+
+
 }
+
+
+
+

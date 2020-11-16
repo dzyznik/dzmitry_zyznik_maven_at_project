@@ -13,14 +13,6 @@ public class BookingMadrid {
         booking.searchMadrid();
         booking.likeHotels();
         booking.checkWishList();
-
-
-
-
-
-
-
-
     }
 
 }

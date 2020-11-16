@@ -2,13 +2,8 @@ package tests;
 
 import driver.ThreadLocalDriver;
 import objects.PreconditionMail;
-import objects.PreconditionOpenMail;
 import objects.booking.Booking;
-import objects.mailru.MailLink;
-import objects.trashmail.LoginTrash;
-import objects.trashmail.OpenMail;
-import org.junit.After;
-import org.junit.Before;
+import objects.mailru.Mail;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -17,12 +12,13 @@ import java.awt.*;
 
 public class BookingRegister {
     @BeforeClass
-    public void mailCheck() throws AWTException {
+    public void mailCheck() {
         PreconditionMail preconditionMail = new PreconditionMail();
         preconditionMail.newMail();
     }
+
     @Test
-    public void registrationTest() throws AWTException {
+    public void registrationTest() throws InterruptedException {
         Booking booking = new Booking();
         booking.bookingSite();
         booking.registerButton();
@@ -32,18 +28,17 @@ public class BookingRegister {
         booking.personalization();
         ThreadLocalDriver.getWebDriver().close();
         ThreadLocalDriver.setDriverNull();
-
-
-        LoginTrash loginTrash = new LoginTrash();
-        loginTrash.login();
-        OpenMail openMail = new OpenMail();
-        openMail.openTrashMail();
-
-        MailLink mailLink = new MailLink();
-        mailLink.confirmLink();
-
+        Mail mail = new Mail();
+        mail.openMail();
+        mail.login();
+        mail.findMail();
+        mail.confirmLink();
+        ThreadLocalDriver.getWebDriver().close();
+        ThreadLocalDriver.setDriverNull();
         booking.bookingSite();
+        booking.login();
         booking.checkAcc();
+
 
     }
 
