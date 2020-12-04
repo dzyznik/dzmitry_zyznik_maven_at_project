@@ -27,8 +27,9 @@
                 <version>2.22.2</version>
                 <configuration>
                     <includes>
-                        <include>FakeRunner1.java</include>
-                        <include>FakeRunner2.java</include>
+<!--                        <include>FakeRunner1.java</include>-->
+                        <include>SuitRunner.java</include>
+
                     </includes>
                     <testFailureIgnore>false</testFailureIgnore>
                     <argLine>

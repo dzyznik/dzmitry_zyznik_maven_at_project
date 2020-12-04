@@ -2,6 +2,8 @@ people/BaseEngineerTest.class
 day19/suites/cucumber/FakeRunner1.class
 day16/Screenshot.class
 parser/Search.class
+utils/reporter/CustomCucumberPlugin.class
+utils/reporter/Result.class
 mobile/tests/RollDice.class
 objects/trashmail/Trashmail.class
 databases/Category.class
@@ -19,6 +21,7 @@ day17/BookingHover.class
 tests/BookingHeaders.class
 objects/PreconditionMail.class
 day19/suites/cucumber/FakeCommonRunner.class
+utils/reporter/TestRailConnector.class
 people/AutomationEngineerTess.class
 day17/SelectDemo.class
 databases/DbConnect.class
