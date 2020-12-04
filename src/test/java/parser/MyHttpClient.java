@@ -16,7 +16,7 @@ import java.net.URISyntaxException;
 
 public class MyHttpClient {
     public static void main(String[] args) throws IOException, URISyntaxException {
-        Search search = new Search("Alberto", true);
+        Search search = new Search(true, "a");
 
         search(search);
 //        getCurrency(2);

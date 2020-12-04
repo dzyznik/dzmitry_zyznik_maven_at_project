@@ -1,0 +1,9 @@
+Test execution report!
+Test executed: 5.0
+ - passed: 3.0
+ - failed: 2.0
+ - pass ratio: 60.0%
+Failed list: 
+I run fake 1.1 at line: 4
+I run fake 1.3 at line: 16
+I run fake 1.4 at line: 22

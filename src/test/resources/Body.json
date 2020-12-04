@@ -1,0 +1,7 @@
+{
+  "status_id": 5,
+  "comment": "This test failed",
+  "elapsed": "15s",
+  "defects": "TR-7",
+  "version": "1.0 RC1 build 3724"
+}
